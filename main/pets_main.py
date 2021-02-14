@@ -9,6 +9,10 @@ from mbbl.util.base_main import train
 from mbbl.util.common import logger
 
 
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
+
+
 def main():
     parser = base_config.get_base_config()
     parser = cem_config.get_cem_config(parser)
